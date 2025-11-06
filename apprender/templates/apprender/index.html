@@ -9,6 +9,7 @@
   <h1>Felicitaciones has desplegado correctamente tu aplicativo en render.com</h1>
   <h2>Harol Mauricio Gómez Zapata</h2>
   <form action="{% url 'insertar_u' %}" method="post">
+    {% csrf_token %}
     <input type="text" name="correo" placeholder="CORREO" required><br>
     <input type="password" name="clave" placeholder="CONTRASEÑA" required><br>
     <input type="submit" value="AGREGAR USUARIO">
