@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>CORREO</th>
+        <th>CLAVE</th>
+        <th>FOTOGRAFIA</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usuario in usuarios %}
+        <tr>
+          <td>{{ usuario.id_usuario }}</td>
+          <td>{{ usuario.correo }}</td>
+          <td>{{ usuario.clave }}</td>
+          <td>{{ usuario.foto_perfil }}</td>
+          <td>
+            <a href="#">EDITAR</a>&nbsp;&nbsp;
+            <a href="#">ELIMINAR</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
